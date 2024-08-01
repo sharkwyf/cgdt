@@ -1,6 +1,18 @@
 # Critic-Guided Decision Transformer for Offline Reinforcement Learning
 This repository contains the Pytorch implementation of [Critic-Guided Decision Transformer for Offline Reinforcement Learning](https://arxiv.org/abs/2312.13716).
 
+## Requirements
+```console
+conda env create -f conda_env.yml
+source activate cgdt
+```
+
+## Example
+To train an ODT agent for `hopper` with the `medium-v2` dataset:
+```console
+python main.py
+```
+
 If you use this code for your research, please cite us as:
 ```Bibtex
 @inproceedings{wang2024critic,
@@ -12,18 +24,6 @@ If you use this code for your research, please cite us as:
   pages={15706--15714},
   year={2024}
 }
-```
-
-## Requirements
-```console
-conda env create -f conda_env.yml
-source activate cgdt
-```
-
-## Example
-To train an ODT agent for `hopper` with the `medium-v2` dataset:
-```console
-python main.py
 ```
 
 ## License
