@@ -1,46 +1,34 @@
-# online-dt
-This repository contains the Pytorch implementation of [Online Deicsion Transformer](https://arxiv.org/abs/2202.05607) by [Qinqing Zheng](https://enosair.github.io/), [Amy Zhang](https://amyzhang.github.io/), and [Aditya Grover](https://aditya-grover.github.io/).
+# critic-guided decision transformer
+This repository contains the Pytorch implementation of [Critic-Guided Decision Transformer for Offline Reinforcement Learning](https://arxiv.org/abs/2312.13716).
 
 If you use this code for your research, please cite us as:
 ```Bibtex
-@article{zheng2022online,
-  title={Online decision transformer},
-  author={Zheng, Qinqing and Zhang, Amy and Grover, Aditya},
-  journal={arXiv preprint arXiv:2202.05607},
-  year={2022}
+@inproceedings{wang2024critic,
+  title={Critic-guided decision transformer for offline reinforcement learning},
+  author={Wang, Yuanfu and Yang, Chao and Wen, Ying and Liu, Yu and Qiao, Yu},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={38},
+  number={14},
+  pages={15706--15714},
+  year={2024}
 }
 ```
 
 ## Requirements
 ```console
 conda env create -f conda_env.yml
-source activate odt
+source activate cgdt
 ```
-
-### Tips
-If you encounter the `libstdc++.so.6: version 'GLIBCXX_3.4.xx' not found` error, the following command might help:
-```console
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:<path-to-your-conda-env>/lib
-```
-I have also found that `tensorboard` wants `protobuf` version to be `3.20.x`, and this helped
-```console
-# you might need to uninstall dm-control
-pip3 install --upgrade protobuf==3.20.0 
-```
-
 
 ## Example
 To train an ODT agent for `hopper` with the `medium-v2` dataset:
 ```console
 python main.py
 ```
-This will produce the `exp` folder, where all the outputs are going to be logged including tensorboard blobs. One can attach a tensorboard to monitor training by running:
-```console
-tensorboard --logdir exp
-```
 
 ## License
-The majority of `online-dt` is licensed under CC-BY-NC, however portions of the project are available under separate license terms: 
+The majority of `cgdt` is licensed under MIT License, however portions of the project are available under separate license terms: 
+* online-dt - CC-BY-NC
 * D4RL dataset -  Creative Commons Attribution 4.0 License (CC-BY)
 * D4RL code, transformers, Lamb - Apache 2.0 License
 * stable-baselines3, Gym, decision-transformer - MIT License
