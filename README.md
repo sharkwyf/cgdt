@@ -1,4 +1,4 @@
-# critic-guided decision transformer
+# Critic-Guided Decision Transformer for Offline Reinforcement Learning
 This repository contains the Pytorch implementation of [Critic-Guided Decision Transformer for Offline Reinforcement Learning](https://arxiv.org/abs/2312.13716).
 
 If you use this code for your research, please cite us as:
