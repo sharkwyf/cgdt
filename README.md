@@ -8,7 +8,7 @@ source activate cgdt
 ```
 
 ## Example
-To train an CGDT agent for `hopper` with the `medium-v2` dataset:
+To train a CGDT agent for `hopper` with the `medium-v2` dataset:
 ```console
 python main.py
 ```
